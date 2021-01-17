@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cliweb index{% endblock %}
+
+{% block body %}
+    <h1>Cliweb index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sku</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Created_at</th>
+                <th>Slug</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cliweb in cliwebs %}
+            <tr>
+                <td>{{ cliweb.id }}</td>
+                <td>{{ cliweb.Sku }}</td>
+                <td>{{ cliweb.Status }}</td>
+                <td>{{ cliweb.Price }}</td>
+                <td>{{ cliweb.Description }}</td>
+                <td>{{ cliweb.CreatedAt ? cliweb.CreatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ cliweb.Slug }}</td>
+                <td>
+                    <a href="{{ path('cliweb_show', {'id': cliweb.id}) }}">show</a>
+                    <a href="{{ path('cliweb_edit', {'id': cliweb.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('cliweb_new') }}">Create new</a>
+    <br>
+    <a href="{{ path('cliweb_show') }}">Export to JSON</a>
+{% endblock %}

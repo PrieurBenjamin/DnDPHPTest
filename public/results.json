@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "sku": "628937272",
+        "status": "Enable",
+        "price": "14.9",
+        "description": "Cornelia, The Dark Unicorn.",
+        "created_at": "2018-12-12 10:34:00",
+        "slug": "cornelia-the-dark-unicorn"
+    },
+    {
+        "id": "2",
+        "sku": "628937273",
+        "status": "Disable",
+        "price": "18.8",
+        "description": "Be my bestie, darling sweet.",
+        "created_at": "2018-12-12 10:34:00",
+        "slug": "be-my-bestie"
+    }
+]

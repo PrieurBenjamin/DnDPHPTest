@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Cliweb{% endblock %}
+
+{% block body %}
+    <h1>Create new Cliweb</h1>
+
+    {{ include('cliweb/_form.html.twig') }}
+
+    <a href="{{ path('cliweb_index') }}">back to list</a>
+{% endblock %}
